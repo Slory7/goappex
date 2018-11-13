@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: richengke/nginx-proxy:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./config/nginx/Dockerfile
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /home/certs:/etc/nginx/certs
+      #- ./config/nginx-proxy.conf:/etc/nginx/proxy.conf:ro
+    ports:
+      - "${PORT:-80}:80"
+      - "${PORTSSL:-443}:443"
+    restart: "unless-stopped"

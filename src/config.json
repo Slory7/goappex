@@ -1,0 +1,14 @@
+{
+    "addr":":80",
+    "dbType":"postgres",
+    "dbConnectionString":"postgres://postgres:postgres@postgres.data/goappex?sslmode=disable",
+    "dbReadOnlyConnectionString":"postgres://postgres:postgres@postgres.data/goappex?sslmode=disable",
+    "redis":{
+        "hosts":"redis.data:6379",
+        "password":"",
+        "masterName":"",
+        "dbNumber": 0,
+        "IdleTimeout": 28,
+        "PoolSize":1000
+    }
+}

@@ -1,0 +1,1 @@
+orm + db cache + db migration + repository pattern + ioc + iris

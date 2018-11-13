@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "type": "shell",    
+    "command": "go",
+    "echoCommand": true,
+    "options": {
+        "cwd": "${workspaceFolder}\\src",
+        "env": {
+            "GOPATH":"C:\\Users\\bruce\\go;E:\\go;${workspaceFolder}"
+        }
+        
+    },
+    "tasks": [
+        {
+            "label": "build",
+            "args": [
+                "-x",
+                "-o",
+                "GoAppEx.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "test",
+            "args": [
+                "test"
+            ],
+            "group": "test"
+        }
+    ]
+}

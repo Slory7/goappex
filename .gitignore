@@ -1,0 +1,12 @@
+#.vscode
+.vs
+.DS_Store
+pkg
+output
+debug
+*.swp
+*.exe
+*.exe~
+*.out
+debug.test
+coverage.txt

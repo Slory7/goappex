@@ -1,0 +1,20 @@
+{
+    "appIsDebug": true,
+    "addr": ":8080",
+    "dbType": "postgres",
+    "dbConnectionString": "postgres://postgres:postgres@docker.data/goappex?sslmode=disable",
+    "dbReadOnlyConnectionString": "postgres://postgres:postgres@docker.data/goappex?sslmode=disable",
+    "redis": {
+        "hosts": "docker.data:6379",
+        "password": "",
+        "masterName": "",
+        "dbNumber": 0,
+        "IdleTimeout": 28,
+        "PoolSize": 1000
+    },
+    "_comment": {
+        "dbType": "mssql",
+        "dbConnectionString": "odbc:server=localhost;user id=test;password={testing};database=GoAppEx;app name=GoAppEx",
+        "dbReadOnlyConnectionString": "odbc:server=localhost;user id=test;password={testing};database=GoAppEx;app name=GoAppEx"
+    }
+}

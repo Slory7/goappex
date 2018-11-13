@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  goappex.api:
+    image: richengke/goappex-api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./src/Dockerfile   
+    environment:
+      - VIRTUAL_HOST=${API_EXTERNAL_DNS_NAME_OR_IP}
+    restart: "unless-stopped"
+    depends_on:     
+     - "postgres.data"
+     - "redis.data"
+
+  postgres.data:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=goappex
+    restart: "unless-stopped"
+
+  redis.data:
+   image: redis:alpine 
+   restart: "unless-stopped"

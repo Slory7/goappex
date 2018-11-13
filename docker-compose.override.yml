@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  goappex.api:
+    environment:
+      - APPISDEBUG=true
+      
+  postgres.data:
+    ports:
+      - 5432:5432
+
+  redis.data:
+    ports:
+      - 6379:6379
